@@ -87,16 +87,23 @@
         }
         .About-main
         {
-            margin-left:6vw;
-            margin-right: 12vw;
-            /* 08 16 여기서 부터 하면 됌 */
-            width:auto;
-            height:auto;
-            box-sizing: border-box;
-            text-align: center;
-            align-self: center;
-            border-radius: 2px 2px 30px 30px;
-            background-image: url(./images/myImage.jpg);
+            position:relative;
+            width:50%;
+            height:50%;
+        }
+        .About-main::before
+        {
+            display:block;
+            content:"";
+            padding-top:100%;
+        }
+        .MyImage
+        {
+            position:absolute;
+            width:100%;
+            height:100%;
+            object-fit: cover;
+            border-radius: 50%;
         }
         .About-contect
         {
@@ -144,7 +151,7 @@
         </div>
         <div class="About">
             <div class="About-main">
-                <img src="mypicture" alt="염형준의 모습">
+                <img src="./images/myImage.jpg" alt="염형준의 모습" class="MyImage">
             </div>
             <div class="About-content">
                 <h1>꾸준한 사람입니다.</h1>
